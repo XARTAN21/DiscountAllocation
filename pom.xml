@@ -10,25 +10,22 @@
     <version>1.0-SNAPSHOT</version>
 
     <dependencies>
-        <!-- Gson for JSON parsing -->
-<!--        <dependency>-->
-<!--            <groupId>com.google.code.gson</groupId>-->
-<!--            <artifactId>gson</artifactId>-->
-<!--            <version>2.11.0</version>-->
-<!--        </dependency>-->
 
-        <!-- JUnit 5 for unit testing -->
-<!--        <dependency>-->
-<!--            <groupId>org.junit.jupiter</groupId>-->
-<!--            <artifactId>junit-jupiter</artifactId>-->
-<!--            <version>5.10.0</version>-->
-<!--            <scope>test</scope>-->
-<!--        </dependency>-->
         <dependency>
             <groupId>com.google.code.gson</groupId>
             <artifactId>gson</artifactId>
             <version>2.13.1</version>
         </dependency>
+
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>5.12.2</version>
+            <scope>test</scope>
+        </dependency>
+
+
+
     </dependencies>
 
     <properties>
@@ -39,12 +36,17 @@
 
     <build>
         <plugins>
-            <!-- Surefire plugin to run tests -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.1.2</version>
+                <configuration>
+                    <forkCount>1</forkCount>
+                    <reuseForks>false</reuseForks>
+                    <failIfNoTests>false</failIfNoTests>
+                </configuration>
             </plugin>
+
         </plugins>
     </build>
 </project>

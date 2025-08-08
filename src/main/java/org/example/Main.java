@@ -21,7 +21,7 @@ public class Main {
             JsonUtil.writeOutput(results);
         } catch (Exception e) {
             System.err.println("Error: " + e.getMessage());
-            System.exit(1);
+
         }
     }
 }

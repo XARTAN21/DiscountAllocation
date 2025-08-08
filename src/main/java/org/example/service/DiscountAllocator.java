@@ -30,7 +30,7 @@ public class DiscountAllocator {
             if(output.exists()){
                 output.delete();
             }
-            System.exit(0);
+            throw new IllegalArgumentException("Input is invalid!!!");
         }
         double maxPerf = agents.stream().mapToDouble(SalesAgent::getPerformanceScore).max().orElse(1);
         double maxSeniority = agents.stream().mapToDouble(SalesAgent::getSeniorityMonths).max().orElse(1);
