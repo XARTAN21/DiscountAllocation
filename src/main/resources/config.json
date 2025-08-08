@@ -1,0 +1,10 @@
+{
+  "weights": {
+    "performanceScore": 0.4,
+    "seniorityMonths": 0.2,
+    "targetAchievedPercent": 0.25,
+    "activeClients": 0.15
+  },
+  "minPerAgent": 500,
+  "maxPerAgent": 5000
+}
